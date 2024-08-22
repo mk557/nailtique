@@ -60,7 +60,7 @@ const ManiPediPage = () => {
                       <NoWrapTypography variant="body1">Buffing - $20</NoWrapTypography>
                       <NoWrapTypography variant="body1">Polish Change - $12</NoWrapTypography>
                       <NoWrapTypography variant="body1">Spa Manicure - $40</NoWrapTypography>
-                      <NoWrapTypography variant="body1">Kids Mani+Pedi - $30</NoWrapTypography>
+                      <NoWrapTypography variant="body1">Kids Mani+Pedi (Under 10yrs) - $30</NoWrapTypography>
                       <NoWrapTypography variant="body1">Dazzle Dry - $25</NoWrapTypography>
                     </Box>
                     <Typography variant="h5" align="center" gutterBottom>
@@ -96,7 +96,7 @@ const ManiPediPage = () => {
                       <NoWrapTypography variant="body1">Callus Pedicure - $45</NoWrapTypography>
                       <NoWrapTypography variant="body1">French Pedicure - $40</NoWrapTypography>
                       <NoWrapTypography variant="body1">Color Gel Pedicure - $50</NoWrapTypography>
-                      <NoWrapTypography variant="body1">Color Gel French Pedicure - $55</NoWrapTypography>
+                      <NoWrapTypography variant="body1">Color Gel French Pedicure - $60</NoWrapTypography>
                       <NoWrapTypography variant="body1">Polish Change - $15</NoWrapTypography>
                     </Box>
                     <Typography variant="h5" align="center" gutterBottom>

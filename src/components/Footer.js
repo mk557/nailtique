@@ -36,7 +36,7 @@ const Footer = () => {
                   Sat: 9am - 6pm
                 </Typography>
                 <Typography variant="body1" className="footer-value">
-                  Sun: 9am - 7pm
+                  Sun: 10am - 5pm
                 </Typography>
               </div>
             </div>
