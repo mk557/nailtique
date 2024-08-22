@@ -25,7 +25,7 @@ const ContactPage = () => {
                   Please call us to make any appointments or message us on social media for any questions about our services.
                 </Typography>
                 <Typography variant="body1" mt={2} align="left">
-                  Email: info@nailtique.com
+                  Email: nail12perry@gmail.com
                   <br />
                   Phone: (201) 750-2649
                 </Typography>

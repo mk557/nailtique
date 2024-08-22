@@ -16,7 +16,7 @@ const Footer = () => {
             </Typography>
             <Typography variant="body1" className="footer-text">
               <span className="footer-heading">EMAIL</span>
-              <span className="footer-value">info@nailtique.com</span>
+              <span className="footer-value">nail12perry@gmail.com</span>
             </Typography>
             <Typography variant="body1" className="footer-text">
               <span className="footer-heading">ADDRESS</span>
