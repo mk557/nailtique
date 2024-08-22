@@ -41,7 +41,7 @@ const ContactPage = () => {
                 </Typography>
                 <Typography variant="h5" mt={4} align="left">Hours</Typography>
                 <Typography variant="body1" mt={2} align="left">
-                  Mon - Fri: 9:00 AM - 7:00 PM
+                  Mon - Fri: 9:30 AM - 7:00 PM
                   <br />
                   Sat: 9:00 AM - 6:00 PM
                   <br />
