@@ -37,7 +37,8 @@ h1 {
     border-radius: 8px; /* Rounded corners for a softer look */
     width: 100vw; /* Full width of the viewport */
     box-sizing: border-box; /* Include padding and border in total width */
-    height: 25vh; /* Height of 30% of the viewport height */
+    height: auto; /* Height of 30% of the viewport height */
+    min-height: 200px; /* Set a minimum height */
     display: flex; /* Flexbox for centering content */
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
@@ -56,29 +57,74 @@ h1 {
     max-width: 1000px; /* Limit the width of the text for better readability */
     margin: 0 auto; /* Center the text horizontally */
   }
-  
-  /* Responsive adjustments for hero section */
-  @media (max-width: 768px) {
-    .hero-section {
-      padding: 30px 10px; /* Adjust padding for tablets */
-    }
-  
-    .hero-text {
-      font-size: 1.2rem; /* Adjust font size for tablets */
-      padding: 0 10px; /* Add padding to ensure text doesn't touch the edges */
-    }
+  /* src/components/HomePage.css */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
   }
-  
-  @media (max-width: 480px) {
-    .hero-section {
-      padding: 20px 5px; /* Adjust padding for mobile phones */
-    }
-  
-    .hero-text {
-      font-size: 1rem; /* Further adjust font size for mobile phones */
-      padding: 0 5px; /* Add padding to ensure text doesn't touch the edges */
-    }
+
+  .hero-section {
+    width: 100vw; /* Full width of the viewport */
+    height: 25vh; /* Set a fixed height for consistency */
   }
+
+  .hero-text {
+    font-size: 1.7rem; /* Keep font size consistent with desktop view */
+    padding: 0 20px; /* Ensure text fits well */
+  }
+
+  .welcome-image-container {
+    max-height: 500px; /* Adjust as needed */
+  }
+
+  .welcome-text {
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ensure text fits */
+  }
+
+  .grid-section {
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    gap: 20px; /* Maintain spacing */
+  }
+
+  .grid-item {
+    flex: 1 1 calc(33% - 20px); /* Three items per row with spacing */
+    margin: 0; /* Remove margins */
+  }
+
+  .grid-image {
+    max-width: 100%; /* Ensure images fit within grid items */
+  }
+}
+
+/* Desktop and larger devices */
+@media (min-width: 769px) {
+  .hero-section {
+    width: 100vw; /* Full width of the viewport */
+    height: 25vh; /* Fixed height */
+  }
+
+  .welcome-text {
+    width: 50%; /* Centered text */
+    padding: 0 30px; /* Ensure text fits well */
+  }
+
+  .grid-section {
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
+  .grid-item {
+    flex: 1; /* Equal width items */
+  }
+
+  .grid-image {
+    max-width: 90%; /* Adjust to fit the grid item */
+  }
+}
+
   
   .hero-section {
   background-color: #fff8f8 !important;

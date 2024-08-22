@@ -1,64 +1,96 @@
 .footer {
-    background-color: white; /* White background for the footer */
-    padding: 20px 0; /* Space inside the footer */
-    border-top: 1px solid #ddd; /* Optional: Adds a light border on top */
-    display: flex; /* Use flexbox to align items */
-    justify-content: center; /* Center the content horizontally */
-    align-items: flex-start; /* Align items to the top */
-    flex-direction: column; /* Stack items vertically */
-  }
-  
-  .footer-container {
-    display: flex; /* Use flexbox to align items */
-    justify-content: center; /* Center items horizontally */
-    width: 100%; /* Full width of the footer */
-  }
-  
-  .footer-left {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-    margin-right: auto; /* Push this section to the left */
-  }
-  
-  .footer-logo {
-    /* margin-bottom: -20px; */
-    padding-bottom: 200 0px;
-    line-height: 0px;
-    margin-top: -210px;
-    /* margin: -220px 0; Space around the logo */
-    height: 200px; /* Adjust height to make the logo smaller */
-    width: auto; /* Maintain aspect ratio */
-  }
-  
-  .footer-text {
-    color: black; /* Black font color for all footer text */
-    margin-bottom: 5px; /* Space below each text item */
-    font-size: 14px !important; /* Adjust font size if needed */
-  }
-  
+  background-color: #ffffff; /* Dark background color for footer */
+  color: #fff; /* Light text color for contrast */
+  padding: 20px 0; /* Vertical padding */
+  text-align: center;
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  position: relative; /* Relative positioning to prevent overlap */
+  margin-top: auto; /* Push footer to the bottom */
+  border-top: 2px solid #c79288; /* Top border with color and width */
+}
+
+.footer-container {
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Full width of the footer */
+  flex-wrap: wrap; /* Ensure content wraps properly on smaller screens */
+}
+
+/* Left section of the footer */
+.footer-left {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+  margin-right: auto; /* Push this section to the left */
+}
+
+.footer-logo {
+  line-height: 0; /* Reduce line height for tight spacing */
+  margin-top: -210px; /* Adjust margin as needed */
+  height: 200px; /* Adjust height to make the logo smaller */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Footer text and items */
+.footer-text {
+  color: black; /* Black font color for all footer text */
+  margin-bottom: 5px; /* Space below each text item */
+  font-size: 14px !important; /* Adjust font size if needed */
+}
 
 .footer-item {
-    margin-bottom: 5px; /* Space between each item */
-  }
-  .footer-heading {
-    font-weight: bold; /* Make heading text bold */
-    text-decoration: underline; /* Underline the heading text */
-    font-size: 15px !important; /* Adjust font size if needed */
-  }
-  
-  .footer-value {
-    margin-left: 5px; /* Space between the heading and value */
-    font-size: 14px !important; /* Adjust font size if needed */
+  margin-bottom: 5px; /* Space between each item */
+}
 
+.footer-heading {
+  font-weight: bold; /* Make heading text bold */
+  text-decoration: underline; /* Underline the heading text */
+  font-size: 15px !important; /* Adjust font size if needed */
+}
+
+.footer-value {
+  margin-left: 5px; /* Space between the heading and value */
+  font-size: 14px !important; /* Adjust font size if needed */
+}
+
+.logo-container {
+  display: flex; /* Use flexbox to center the logo */
+  justify-content: center; /* Center the logo horizontally */
+  width: 100%; /* Full width of the container */
+}
+
+.copyright-text {
+  margin-top: -40px !important; /* Adjust this value to bring text higher */
+}
+
+/* Responsive adjustments for the footer */
+@media (max-width: 768px) {
+  .footer {
+    align-items: center; /* Center align items on smaller screens */
   }
-  
-  .logo-container {
-    display: flex; /* Use flexbox to center the logo */
-    justify-content: center; /* Center the logo horizontally */
-    width: 100%; /* Full width of the container */
+
+  .footer-container {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Align items to the center */
   }
-  
+
+  .footer-left {
+    align-items: center; /* Center-align items in the left section */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .footer-logo {
+    height: 150px; /* Adjust logo size for smaller screens */
+    margin-top: -150px; /* Adjust margin for better placement */
+  }
+
+  .footer-text, .footer-heading, .footer-value {
+    text-align: center; /* Center text on smaller screens */
+    font-size: 13px !important; /* Slightly reduce text size */
+  }
+
   .copyright-text {
-    margin-top: -40px !important; /* Adjust this value to bring text higher */
+    margin-top: -20px !important; /* Adjust margin for smaller screens */
   }
+}

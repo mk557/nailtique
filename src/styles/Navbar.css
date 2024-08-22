@@ -1,34 +1,67 @@
+/* Base styles for desktop and larger screens */
 .navbar {
-    background-color: white !important;
-    box-shadow: none;
-    height: 100px; /* Adjust the height as needed */
-    display: flex;
-    align-items: center;
+  background-color: white !important;
+  box-shadow: none;
+  height: 100px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* Add padding for spacing */
+}
+
+.navbar-logo {
+  margin-bottom: 40px;
+  height: 200px; /* Adjust logo size for desktop */
+  margin-right: auto; /* Pushes logo to the left */
+  display: block;
+}
+
+.navbar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-buttons-container {
+  margin-left: auto; /* This ensures the buttons are pushed to the right */
+  display: flex;
+  gap: 20px; /* Adjust the gap between the buttons */
+}
+
+.navbar-buttons {
+  color: #333 !important;
+  margin-top: 10px; /* Adjust margin to bring buttons down */
+  font-size: 16px;
+}
+
+/* Mobile styles (screens less than 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack the items vertically */
+    height: auto; /* Adjust height to fit content */
+    padding: 10px; /* Add padding for mobile */
   }
-  
+
   .navbar-logo {
-    margin-bottom: 40px;
-    height: 200px; /* Increase this value to make the logo bigger */
-    margin-right: auto; /* Pushes logo to the left */
-    display: block;
+    height: 150px; /* Reduce the logo size on mobile */
+    margin-bottom: 20px; /* Adjust margin for better spacing */
   }
-  
+
   .navbar-toolbar {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack toolbar items */
     align-items: center;
-    width: 100%;
   }
-  
+
   .navbar-buttons-container {
-    margin-left: auto; /* This ensures the buttons are pushed to the right */
-    display: flex;
-    gap: 20px; /* Adjust the gap between the buttons */
+    flex-direction: column; /* Stack the buttons vertically */
+    gap: 10px; /* Reduce the gap between buttons on mobile */
+    margin-left: 0; /* Center the buttons */
+    width: 100%; /* Full width for mobile */
+    align-items: center;
   }
-  
+
   .navbar-buttons {
-    color: #333 !important;
-    margin-top: 10px; /* Adjust margin to bring buttons down */
-    font-size: 16px;
+    font-size: 14px; /* Reduce button text size */
+    margin-top: 0; /* Remove top margin on mobile */
   }
-  
+}

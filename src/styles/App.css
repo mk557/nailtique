@@ -1,6 +1,5 @@
 /* src/styles/App.css */
 
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -23,34 +22,20 @@ header {
   z-index: 1000; /* Ensure the header stays on top */
 }
 
-
 .container {
   padding: 0; /* Remove default padding */
   margin: 0;  /* Remove default margin */
   max-width: 100%; /* Allow full width of the viewport */
-}
-
-footer {
-  background-color: #333; /* Dark background color for footer */
-  color: #fff; /* Light text color for contrast */
-  padding: 20px;
-  text-align: center;
-  width: 100%; /* Full width */
-  box-sizing: border-box; /* Include padding and border in the element's total width */
-  position: relative; /* Relative positioning to prevent overlap */
-  margin-top: auto; /* Push footer to the bottom */
-}
-
-/* Responsive adjustments for container */
-@media (max-width: 768px) {
-  .container {
-    padding: 60px 15px 15px; /* Adjust padding for smaller screens */
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
 }
 
 .hero h1 {
   font-size: 3rem;
   margin: 0;
+  text-align: center;
 }
 
 /* Responsive adjustments for hero text */
@@ -62,12 +47,14 @@ footer {
 
 .hero p {
   font-size: 1.5rem;
+  text-align: center;
+  padding: 10px 0;
 }
 
 /* Responsive adjustments for hero paragraph */
 @media (max-width: 768px) {
   .hero p {
-    font-size: 1.2rem; /* Adjust font size for tablets */
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
   }
 }
 
@@ -77,3 +64,71 @@ footer {
   padding: 0;
 }
 
+
+/* Responsive adjustments for grid section */
+@media (max-width: 768px) {
+  .grid-section {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+  }
+
+  .grid-item {
+    margin-bottom: 20px;
+    flex-basis: 100%; /* Ensure grid items take full width on mobile */
+  }
+
+  .grid-image {
+    max-width: 100%; /* Remove max width for better scaling */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Full-width flower image */
+.flower-image-container {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Adjustments for flower image container */
+@media (max-width: 768px) {
+  .flower-image-container {
+    height: auto;
+  }
+
+  .flower-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Overlay text */
+.overlay-text {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Follow button */
+.follow-button-container {
+  margin-top: 20px;
+}
+
+.follow-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.follow-button:hover {
+  background-color: #555;
+}
+
+/* Responsive adjustments for container padding */
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 15px 15px; /* Adjust padding for smaller screens */
+  }
+}

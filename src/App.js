@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/manipedi" element={<ManiPediPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-      <Footer />
+      
       <LocationModal open={isLocationModalOpen} onClose={handleCloseLocationModal} />
     </Router>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import Footer from '../components/Footer'; // Adjust the path if needed
 
 // Styled component for the map container
 const MapContainer = styled(Paper)(({ theme }) => ({
@@ -10,8 +11,17 @@ const MapContainer = styled(Paper)(({ theme }) => ({
   boxSizing: 'border-box',
 }));
 
+const PageContainer = styled('div')(({ theme }) => ({
+  minHeight: 'calc(83vh - 64px)', // Adjust based on footer height
+  display: 'flex',
+  flexDirection: 'column',
+  paddingBottom: theme.spacing(2), // Add space for footer
+}));
+
 const ContactPage = () => {
     return (
+      <div>
+        <PageContainer>
       <Container className="container">
         <Box mt={4}>
           <Typography variant="h2" align="center">Contact Us</Typography>
@@ -67,6 +77,9 @@ const ContactPage = () => {
         <Box mt={8} mb={4} /> {/* Adjust mt and mb values to control the space */}
       </Box>
     </Container>
+    </PageContainer>
+    <Footer/>
+    </div>
   );
 };
 

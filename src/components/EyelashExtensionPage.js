@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import Footer from '../components/Footer'; // Adjust the path if needed
 
 // Styled components
 const ServiceCategory = styled(Paper)(({ theme }) => ({
@@ -13,9 +14,18 @@ const ServiceCategory = styled(Paper)(({ theme }) => ({
   alignItems: 'center',
 }));
 
+const PageContainer = styled('div')(({ theme }) => ({
+  minHeight: 'calc(83vh - 64px)', // Adjust based on footer height
+  display: 'flex',
+  flexDirection: 'column',
+  paddingBottom: theme.spacing(4), // Add space for footer
+}));
+
 const EyelashExtensionPage = () => {
   return (
-    <Container className="container">
+    <div>
+      <PageContainer>
+      <Container className="container" maxWidth="lg" sx={{ flexGrow: 1 }}>
       <Box mt={4} mb={4}>
         <Typography variant="h2" align="center" gutterBottom>
           Eyelash Extensions
@@ -136,6 +146,9 @@ const EyelashExtensionPage = () => {
         </Grid>
       </Box>
     </Container>
+    </PageContainer>
+    <Footer/>
+    </div>
   );
 };
 

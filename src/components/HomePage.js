@@ -10,6 +10,7 @@ import instagramIcon from '../images/instagram.png'; // Instagram icon
 import googleIcon from '../images/google.png'; // Google review icon
 import largeImage from '../images/background.png'
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer'; // Adjust the path if needed
 
 const HomePage = () => {
     return (
@@ -73,6 +74,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
+            <Footer /> {/* Ensure the Footer is at the bottom */}
         </div>
     );
 };

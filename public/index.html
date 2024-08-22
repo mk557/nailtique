@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -47,3 +47,18 @@
     -->
   </body>
 </html>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var viewportMeta = document.querySelector('meta[name="viewport"]');
+    if (!viewportMeta) {
+      viewportMeta = document.createElement('meta');
+      viewportMeta.name = 'viewport';
+      document.head.appendChild(viewportMeta);
+    }
+    if (window.innerWidth < 1024) { // Adjust this threshold as needed
+      viewportMeta.setAttribute('content', 'width=1024'); // Set to desktop width
+    } else {
+      viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1'); // Default for larger screens
+    }
+  });
+</script>
