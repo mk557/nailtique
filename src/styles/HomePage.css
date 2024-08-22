@@ -1,0 +1,224 @@
+/* src/components/HomePage.css */
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300; /* Light weight */
+    font-size: 100px; /* Font size */
+    line-height: 1.2; /* Adjust line height as needed */
+    color: #fff; /* Change color if needed */
+  }
+
+.welcome-image-container {
+    position: relative;
+    width: 100%; /* Full width of the container */
+    overflow: hidden; /* Ensure image does not overflow */
+    max-height: 900px;
+  }
+  
+  .welcome-image {
+    width: 100%; /* Make image fit the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container */
+  }
+  
+  .welcome-text {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Change color as needed */
+    text-align: center;
+  }
+  
+.hero-section {
+    background-color: #dfd9d9 !important; /* Background color */
+    padding: 60px 20px; /* Increased padding for a larger section */
+    text-align: center;
+    margin: 0; /* Remove margin to ensure full-width appearance */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    width: 100vw; /* Full width of the viewport */
+    box-sizing: border-box; /* Include padding and border in total width */
+    height: 25vh; /* Height of 30% of the viewport height */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    position: relative; /* Position relative to document flow */
+    left: 0; /* Align to the left edge */
+    top: 0; /* Align to the top edge */
+    z-index: 1; /* Ensure it’s above other content if needed */
+  }
+  
+  .hero-text {
+    color: #c79288; /* Font color */
+    font-family: 'King Caslon Display', serif; /* Font family */
+    font-size: 1.7rem; /* Font size for larger screens */
+    font-weight: 400; /* Adjust font weight as needed */
+    line-height: 1.4; /* Line height for better readability */
+    max-width: 1000px; /* Limit the width of the text for better readability */
+    margin: 0 auto; /* Center the text horizontally */
+  }
+  
+  /* Responsive adjustments for hero section */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 30px 10px; /* Adjust padding for tablets */
+    }
+  
+    .hero-text {
+      font-size: 1.2rem; /* Adjust font size for tablets */
+      padding: 0 10px; /* Add padding to ensure text doesn't touch the edges */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section {
+      padding: 20px 5px; /* Adjust padding for mobile phones */
+    }
+  
+    .hero-text {
+      font-size: 1rem; /* Further adjust font size for mobile phones */
+      padding: 0 5px; /* Add padding to ensure text doesn't touch the edges */
+    }
+  }
+  
+  .hero-section {
+  background-color: #fff8f8 !important;
+  padding: 60px 20px;
+  text-align: center;
+  margin: 0;
+  border-radius: 8px;
+  width: 100vw;
+  box-sizing: border-box;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+
+.grid-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
+  }
+  
+  .grid-link {
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Make the link cover the grid item */
+  }
+  
+  .grid-item {
+    border: 2px solid #d2b6b6; /* Border around each grid item */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure the border radius applies to images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer for clickable items */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin: 0 auto; /* Center items horizontally */
+
+  }
+  
+  .grid-image {
+    width: 90%;
+    height: auto;
+    display: block;
+    max-width: 700px; /* Set a maximum width for images */
+    opacity: 0.85; /* Set initial transparency of the image */
+  }
+  
+  .grid-item p {
+    font-size: 1.1rem; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    color: #333; /* Dark text color for contrast */
+    margin-top: 10px; /* Space between image and text */
+    text-transform: uppercase; /* Capitalize text */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+    font-family: 'Cormorant Garamond', serif;
+    cursor: pointer; /* Ensure cursor is pointer on hover */
+    padding: 10px;
+
+  }
+
+  .grid-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    cursor: pointer; /* Ensure cursor is pointer on hover */
+
+  }
+  
+  
+  .flower-image-container {
+    position: relative; /* Make this element the reference for absolute positioning */
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Hide overflow to ensure content fits */
+    margin: 0; /* Remove margin to fit the viewport */
+    padding: 0; /* Remove padding to fit the viewport */
+  }
+
+  .overlay-links {
+    margin-top: 10px; /* Space between the text and the links */
+  }
+  
+  .overlay-links a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Space between links */
+    display: inline-block; /* Ensure links are displayed inline */
+  }
+  
+  .overlay-links a img {
+    width: 40px; /* Set width for icons */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 1.2rem; /* Font size for text */
+    font-weight: 600;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Background color with opacity */
+    padding: 60px;
+    border: 5px solid white; /* Increase border thickness */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    max-width: 90%; /* Keep text inside the box */
+    
+  }
+  
+  .flower-image {
+    width: 100vw; /* Set the width to the full viewport width */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    display: block; /* Make sure the image is a block element */
+  }
+
+  /* Follow Button */
+  .follow-button-container {
+    margin-top: 15px;
+  }
+  
+  
+  .follow-button {
+    background-color: #6b6666; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.7rem; /* Increase the font size slightly */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-weight: 200; /* Add weight for bold effect */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .follow-button:hover {
+    background-color: #b5756b; /* Darker shade on hover */
+  }
